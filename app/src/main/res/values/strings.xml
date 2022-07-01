@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FUFCLIENT</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_feed">Hello from FEED</string>
+    <string name="hello_messages">Hello from MESSAGES</string>
+    <string name="hello_profile">Hello from PROFILE</string>
+</resources>

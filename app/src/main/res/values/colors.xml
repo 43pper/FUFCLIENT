@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="darkPurple">#FF9250FD</color>
+    <color name="purple">#FFB085F5</color>
+    <color name="lightPurple">#FFD3BEF4</color>
+    <color name="lightPurpleVariant">#FFD1B9F8</color>
+    <color name="grey">#FFB3A5CA</color>
+    <color name="lightViolet">#FFD4C6EA</color>
+    <color name="darkYellow">#FFE9D310</color>
+    <color name="lightYellow">#FFFAE15D</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
