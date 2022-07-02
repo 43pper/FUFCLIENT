@@ -1,0 +1,24 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android"
+            android:shape="oval">
+
+
+            <gradient
+                android:angle="135"
+                android:centerColor="#FFFFFF"
+                android:endColor="#FFFFFF"
+                android:startColor="#FFFFFF"
+                android:type="linear"/>
+
+            <size
+                android:height="100dp"
+                android:width="100dp"/>
+
+            <stroke
+                android:color="#074EE8"
+                android:width="2.3dp"/>
+        </shape>
+    </item>
+    <item android:drawable="@drawable/vector_back_arrow" />
+</layer-list>
