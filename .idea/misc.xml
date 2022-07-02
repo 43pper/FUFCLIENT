@@ -10,8 +10,12 @@
         <entry key="..\:/FUFCLIENT/app/src/main/res/drawable/circle_settings_icone.xml" value="0.2" />
         <entry key="..\:/FUFCLIENT/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.184" />
         <entry key="..\:/FUFCLIENT/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2265" />
+        <entry key="..\:/FUFCLIENT/app/src/main/res/drawable/icons.xml" value="0.2345" />
+        <entry key="..\:/FUFCLIENT/app/src/main/res/drawable/profile_circle_icone.xml" value="0.1855" />
         <entry key="..\:/FUFCLIENT/app/src/main/res/drawable/rectangle_basic.xml" value="0.1" />
         <entry key="..\:/FUFCLIENT/app/src/main/res/drawable/rectangle_preferences_icone.xml" value="0.12" />
+        <entry key="..\:/FUFCLIENT/app/src/main/res/drawable/settings_circle_icone.xml" value="0.1855" />
+        <entry key="..\:/FUFCLIENT/app/src/main/res/drawable/vector_camera.xml" value="0.1855" />
         <entry key="..\:/FUFCLIENT/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
         <entry key="..\:/FUFCLIENT/app/src/main/res/layout/fragment_feed_page.xml" value="0.22826086956521738" />
         <entry key="..\:/FUFCLIENT/app/src/main/res/layout/fragment_profile_page.xml" value="0.22826086956521738" />

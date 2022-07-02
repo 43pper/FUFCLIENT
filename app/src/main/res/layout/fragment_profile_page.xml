@@ -10,21 +10,55 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+
+
+    <View
+        android:id="@+id/settingsButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+        android:background="@drawable/settings_circle_icone"
+        android:onClick="changePage"
+
+
+        >
+
+    </View>
+
+    <!--    <Button-->
+<!--        android:id="@+id/backButton"-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:background="@drawable/back_circle_icone">-->
+
+<!--    </Button>-->
+
+
+
+    <View
+        android:id="@+id/photoProfileAdd"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:background="@drawable/profile_circle_icone"
+        android:onClick="changePage"
+        >
+
+    </View>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_profile" />
+        android:text="@string/hello_profile"
+        android:layout_gravity="center"
+        />
+
 
     <View
         android:layout_width="133dp"
-        android:layout_height="53dp"
+        android:layout_height="60dp"
         android:background="@drawable/preferences_rectangle_icone"
 
         />
-
-    <Button
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/settings_circle_icone" />
 
 </LinearLayout>
