@@ -8,43 +8,33 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/pagesFragment"
+        android:name="com.secag.fufclient.pages.ProfilePageFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_profile_page"
+        tools:layout_editor_absoluteX="0dp"/>
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-
-    <Button
-        android:id="@+id/messagesButton"
-        android:layout_width="93dp"
-        android:layout_height="48dp"
-        android:onClick="changePage"
-        android:text="Messages"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
-    <Button
-        android:id="@+id/feedButton"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/navBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="68dp"
-        android:onClick="changePage"
-        android:text="Feed"
+        app:cardCornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/messagesButton" />
+        app:layout_constraintLeft_toLeftOf="parent">
 
-    <Button
-        android:id="@+id/profileButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="changePage"
-        android:text="Profile"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/lightgrey"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="618dp"
+            app:menu="@menu/nav_items"
+            app:labelVisibilityMode="unlabeled"
+            app:itemIconSize="40dp"
+            />
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

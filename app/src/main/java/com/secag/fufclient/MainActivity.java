@@ -19,26 +19,26 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void changePage(View view) {
-        Fragment fragment = null;
-        switch (view.getId()) {
-            case R.id.feedButton:
-                fragment = new FeedPageFragment();
-                break;
-            case R.id.messagesButton:
-                fragment = new MessagesPageFragment();
-                break;
-            case R.id.profileButton:
-                fragment = new ProfilePageFragment();
-                break;
-        }
-        FragmentManager fm = getSupportFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
-        ft.replace(R.id.pagesFragment, fragment);
-        ft.commit();
-        fm = getSupportFragmentManager();
-//        System.out.printf(getSupportFragmentManager().getFragments().get(0).toString());
-        int frames = getSupportFragmentManager().getFragments().size();
-        System.out.println(frames);
-    }
+//    public void changePage(View view) {
+//        Fragment fragment = null;
+//        switch (view.getId()) {
+//            case R.id.feedButton:
+//                fragment = new FeedPageFragment();
+//                break;
+//            case R.id.messagesButton:
+//                fragment = new MessagesPageFragment();
+//                break;
+//            case R.id.profileButton:
+//                fragment = new ProfilePageFragment();
+//                break;
+//        }
+//        FragmentManager fm = getSupportFragmentManager();
+//        FragmentTransaction ft = fm.beginTransaction();
+//        ft.replace(R.id.pagesFragment, fragment);
+//        ft.commit();
+//        fm = getSupportFragmentManager();
+////        System.out.printf(getSupportFragmentManager().getFragments().get(0).toString());
+//        int frames = getSupportFragmentManager().getFragments().size();
+//        System.out.println(frames);
+//    }
 }

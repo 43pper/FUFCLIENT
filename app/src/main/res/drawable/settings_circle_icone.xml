@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
-    <shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="oval">
+        <shape android:shape="oval">
 
+            <gradient
+                android:angle="135"
+                android:centerColor="#FFFFFF"
+                android:endColor="#FFFFFF"
+                android:startColor="#FFFFFF"
+                android:type="linear" />
 
-    <gradient
-        android:angle="135"
-        android:centerColor="#FFFFFF"
-        android:endColor="#FFFFFF"
-        android:startColor="#FFFFFF"
-        android:type="linear"/>
+            <size
+                android:width="100dp"
+                android:height="100dp" />
 
-    <size
-        android:height="100dp"
-        android:width="100dp"/>
+            <stroke
+                android:width="5dp"
+                android:color="#074EE8" />
 
-    <stroke
-        android:color="#074EE8"
-        android:width="2.3dp"/>
-</shape>
+        </shape>
     </item>
-<item android:drawable="@drawable/vector_settings" />
+    <item android:drawable="@drawable/vector_settings"
+        android:height="90dp"
+        android:width="90dp"
+        android:gravity="center"/>
 </layer-list>
