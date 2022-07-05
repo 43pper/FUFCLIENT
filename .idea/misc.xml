@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/FUFCLIENT/app/src/main/res/drawable/icon_camera.xml" value="0.1665" />
+        <entry key="..\:/FUFCLIENT/app/src/main/res/drawable/icon_chat_profile.xml" value="0.1665" />
+        <entry key="..\:/FUFCLIENT/app/src/main/res/layout/fragment_interests_page.xml" value="0.264" />
+        <entry key="..\:/FUFCLIENT/app/src/main/res/layout/fragment_messages_page.xml" value="0.264" />
+        <entry key="..\:/FUFCLIENT/app/src/main/res/layout/fragment_profile_page.xml" value="0.25" />
         <entry key="..\:/PROJECTS/JAVA/FUFCLIENT/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.271" />
         <entry key="..\:/PROJECTS/JAVA/FUFCLIENT/app/src/main/res/drawable/ic_launcher_background.xml" value="0.271" />
         <entry key="..\:/PROJECTS/JAVA/FUFCLIENT/app/src/main/res/drawable/rectangle_basic.xml" value="0.271" />
@@ -11,36 +16,6 @@
         <entry key="..\:/PROJECTS/JAVA/FUFCLIENT/app/src/main/res/layout/fragment_hotbar.xml" value="0.358695652173913" />
         <entry key="..\:/PROJECTS/JAVA/FUFCLIENT/app/src/main/res/layout/fragment_messages_page.xml" value="0.1" />
         <entry key="..\:/PROJECTS/JAVA/FUFCLIENT/app/src/main/res/layout/fragment_profile_page.xml" value="0.22" />
-        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1365" />
-        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable/back_circle_icone.xml" value="0.2495" />
-        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1365" />
-        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable/icon_back.xml" value="0.1365" />
-        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable/icon_camera.xml" value="0.1365" />
-        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable/icon_done.xml" value="0.1365" />
-        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable/icon_settings.xml" value="0.1365" />
-        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable/preference_item.xml" value="0.262" />
-        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable/preference_item_blocked.xml" value="0.1365" />
-        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable/preference_item_checked.xml" value="0.1365" />
-        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable/preferences_rectangle_icone.xml" value="0.139" />
-        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable/profile_circle_icone.xml" value="0.139" />
-        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable/rectangle_basic.xml" value="0.263" />
-        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable/settings_circle_icone.xml" value="0.263" />
-        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable/vector_arrow_back.xml" value="0.2175" />
-        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable/vector_back_arrow.xml" value="0.2495" />
-        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable/vector_camera.xml" value="0.139" />
-        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable/vector_edit.xml" value="0.263" />
-        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable/vector_profile.xml" value="0.139" />
-        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable/vector_settings.xml" value="0.2495" />
-        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/layout/activity_main.xml" value="0.26621847886098404" />
-        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/layout/fragment_blocked_interests_page.xml" value="0.2578125" />
-        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/layout/fragment_feed_page.xml" value="0.2578125" />
-        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/layout/fragment_interests_page.xml" value="0.26621847886098404" />
-        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/layout/fragment_messages_page.xml" value="0.2578125" />
-        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/layout/fragment_preference_item.xml" value="0.4033613316075515" />
-        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/layout/fragment_profile_page.xml" value="0.26621847886098404" />
-        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/layout/fragment_profile_preferences.xml" value="0.26621847886098404" />
-        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/layout/fragment_profile_preferences_wide.xml" value="0.2578125" />
-        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/menu/nav_items.xml" value="0.25677083333333334" />
       </map>
     </option>
   </component>
