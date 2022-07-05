@@ -8,16 +8,20 @@
                 android:centerColor="#FFFFFF"
                 android:endColor="#FFFFFF"
                 android:startColor="#FFFFFF"
-                android:type="linear"/>
+                android:type="linear" />
 
             <size
-                android:height="100dp"
-                android:width="100dp"/>
+                android:width="100dp"
+                android:height="100dp" />
 
             <stroke
-                android:color="#074EE8"
-                android:width="2.3dp"/>
+                android:width="5dp"
+                android:color="#074EE8" />
         </shape>
     </item>
-    <item android:drawable="@drawable/vector_arrow_back" />
+    <item
+        android:width="60dp"
+        android:height="60dp"
+        android:drawable="@drawable/vector_arrow_back"
+        android:gravity="center" />
 </layer-list>

@@ -1,7 +1,11 @@
 package com.secag.fufclient.pages;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.transition.TransitionInflater;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -9,12 +13,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-
-import android.transition.TransitionInflater;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageButton;
 
 import com.secag.fufclient.PreferenceItem;
 import com.secag.fufclient.R;
@@ -24,14 +22,14 @@ import java.util.ArrayList;
 import javax.json.Json;
 import javax.json.JsonArray;
 
-public class InterestsPageFragment extends Fragment {
+public class BlockedInterestsPageFragment extends Fragment {
 
     ArrayList<Integer> selectedInterestsId = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_interests_page, container, false);
+        return inflater.inflate(R.layout.fragment_blocked_interests_page, container, false);
     }
 
     @Override
@@ -57,7 +55,7 @@ public class InterestsPageFragment extends Fragment {
             ft.replace(R.id.pagesFragment, fragment);
             ft.commit();
         });
-        ViewGroup block = (ViewGroup) view.findViewById(R.id.interests_block);
+        ViewGroup block = (ViewGroup) view.findViewById(R.id.blocked_interests_block);
         if (block == null) {
             return;
         }
@@ -99,7 +97,7 @@ public class InterestsPageFragment extends Fragment {
             PreferenceItem preferenceItem = new PreferenceItem(
                     activity,
                     null,
-                    PreferenceItem.ItemType.PREFERENCE,
+                    PreferenceItem.ItemType.BLOCKED_PREFERENCE,
                     array.getJsonObject(i).getInt("id"),
                     array.getJsonObject(i).getString("emoji"),
                     array.getJsonObject(i).getString("title"));

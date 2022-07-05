@@ -12,6 +12,7 @@ public class PreferenceItem extends LinearLayout {
 
     boolean isChecked = false;
     ItemType itemType;
+    int id;
 
     public enum ItemType {
         PREFERENCE,
@@ -19,10 +20,11 @@ public class PreferenceItem extends LinearLayout {
         BLOCKED_PREFERENCE
     }
 
-    public PreferenceItem(Context context, AttributeSet attrs, ItemType itemType, String emoji_symbol, String title) {
+    public PreferenceItem(Context context, AttributeSet attrs, ItemType itemType, int id, String emoji_symbol, String title) {
         super(context, attrs);
 
         this.itemType = itemType;
+        this.id = id;
 
         if (itemType == ItemType.LOCATION) {
             emoji_symbol = "📍";
@@ -54,7 +56,7 @@ public class PreferenceItem extends LinearLayout {
         addView(text);
     }
 
-    public void toggleChecked(){
+    public boolean toggleChecked() {
         isChecked = !isChecked;
         if (isChecked) {
             int background = R.drawable.preference_item_checked;
@@ -66,9 +68,14 @@ public class PreferenceItem extends LinearLayout {
             setBackgroundResource(R.drawable.preference_item);
         }
         setPadding(0, toPixels(3), toPixels(15), toPixels(3));
+        return isChecked;
     }
 
     int toPixels(int dp) {
         return Math.round(dp * getResources().getDisplayMetrics().density);
+    }
+
+    public int getDBId() {
+        return id;
     }
 }

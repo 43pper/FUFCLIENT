@@ -7,7 +7,7 @@
     android:background="@color/purple"
     android:orientation="vertical"
     android:padding="10dp"
-    tools:context=".pages.InterestsPageFragment">
+    tools:context=".pages.BlockedInterestsPageFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -60,13 +60,13 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:padding="10dp"
-                android:text="Interests"
+                android:text="Blocked Interests"
                 android:textAlignment="center"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <com.google.android.flexbox.FlexboxLayout
-                android:id="@+id/interests_block"
+                android:id="@+id/blocked_interests_block"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="10dp"

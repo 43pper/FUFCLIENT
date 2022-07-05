@@ -13,7 +13,7 @@
         android:layout_height="match_parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout="@layout/fragment_profile_page"
-        tools:layout_editor_absoluteX="0dp"/>
+        tools:layout_editor_absoluteX="0dp" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/navBar"
@@ -24,15 +24,15 @@
         app:layout_constraintLeft_toLeftOf="parent">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@color/lightgrey"
-            tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="618dp"
-            app:menu="@menu/nav_items"
-            app:labelVisibilityMode="unlabeled"
             app:itemIconSize="40dp"
-            />
+            app:labelVisibilityMode="unlabeled"
+            app:menu="@menu/nav_items"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="618dp" />
 
     </androidx.cardview.widget.CardView>
 

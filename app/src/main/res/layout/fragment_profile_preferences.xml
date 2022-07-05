@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/rectangle_basic"
     android:transitionName="preferences_block"
-    tools:context=".MainActivity">
+    tools:context=".pages.ProfilePageFragment">
 
     <TextView
         android:id="@+id/preferences_title"
@@ -39,7 +39,6 @@
         android:layout_height="48dp"
         android:background="@drawable/vector_arrow_down"
         android:contentDescription="open preferences"
-        android:onClick="togglePreferencesBlock"
         android:transitionName="toggleButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

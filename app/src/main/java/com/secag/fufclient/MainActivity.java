@@ -14,10 +14,21 @@ import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentContainerView;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.secag.fufclient.pages.BlockedInterestsPageFragment;
+import com.secag.fufclient.pages.FeedPageFragment;
 import com.secag.fufclient.pages.InterestsPageFragment;
+import com.secag.fufclient.pages.MessagesPageFragment;
+import com.secag.fufclient.pages.ProfilePageFragment;
+
+import javax.json.Json;
+import javax.json.JsonArray;
+import javax.json.JsonObject;
+import javax.json.JsonValue;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -29,79 +40,25 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        fillPrefsBlock();
-    }
-
-    public void changePage(View view) {
-        Fragment fragment = null;
-        switch (view.getId()) {
-            case R.id.preferences_edit:
-                fragment = new InterestsPageFragment();
-                break;
-        }
-        FragmentManager fm = getSupportFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
-        ft.replace(R.id.pagesFragment, fragment);
-        ft.commit();
-    }
-
-    public void togglePreferencesBlock(View view) {
-        ViewGroup sceneRoot = (ViewGroup) findViewById(R.id.preferences_root);
-        Scene closed = Scene.getSceneForLayout(sceneRoot, R.layout.fragment_profile_preferences, this);
-        Scene opened = Scene.getSceneForLayout(sceneRoot, R.layout.fragment_profile_preferences_wide, this);
-        TransitionSet transition = new TransitionSet();
-        transition.addTransition(new ChangeBounds());
-        transition.addTransition(new Fade());
-        transition.setOrdering(TransitionSet.ORDERING_SEQUENTIAL);
-        ((ViewGroup) findViewById(R.id.profile)).getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
-        if (view.getId() == R.id.open_pref_button) {
-            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(sceneRoot.getWidth(), Math.round(400 * getResources().getDisplayMetrics().density));
-            sceneRoot.setLayoutParams(layoutParams);
-            TransitionManager.go(opened, transition);
-            fillPrefsBlock();
-            fillLocationsBlock();
-            fillBlockedPrefsBlock();
-        } else {
-            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(sceneRoot.getWidth(), Math.round(250 * getResources().getDisplayMetrics().density));
-            layoutParams.setMargins(0, 0, 0, Math.round(20 * getResources().getDisplayMetrics().density));
-            sceneRoot.setLayoutParams(layoutParams);
-            TransitionManager.go(closed, transition);
-            fillPrefsBlock();
-        }
-    }
-
-    void fillPrefsBlock() {
-        ViewGroup block = (ViewGroup) findViewById(R.id.preferences_pref_block);
-        if (block == null) {
-            return;
-        }
-        String[][] string = {{"💻", "IT"}, {"🍺", "beer"}, {"\uD83C\uDDFA\uD83C\uDDE6", "Ukraine"}, {"🎺", "trumpets"}, {"\uD83E\uDD95", "paleontology"}};
-        for (String[] item : string) {
-            block.addView(new PreferenceItem(this, null, PreferenceItem.ItemType.PREFERENCE, item[0], item[1]));
-        }
-    }
-
-    void fillLocationsBlock() {
-        ViewGroup block = (ViewGroup) findViewById(R.id.preferences_locations_block);
-        if (block == null) {
-            return;
-        }
-        String[] string = {"NURE", "Molodist restourant, Kharkiv", "Sweeter"};
-        for (String item : string) {
-            block.addView(new PreferenceItem(this, null, PreferenceItem.ItemType.LOCATION, "", item));
-        }
-    }
-
-    void fillBlockedPrefsBlock() {
-        ViewGroup block = (ViewGroup) findViewById(R.id.preferences_feed_prefs_block);
-        if (block == null) {
-            return;
-        }
-        String[][] string = {{"\uD83C\uDDF7\uD83C\uDDFA", "russia"}};
-        for (String[] item : string) {
-            PreferenceItem preferenceItem = new PreferenceItem(this, null, PreferenceItem.ItemType.BLOCKED_PREFERENCE, item[0], item[1]);
-            preferenceItem.toggleChecked();
-            block.addView(preferenceItem);
-        }
+        ((BottomNavigationView) findViewById(R.id.bottom_navigation)).setSelectedItemId(R.id.profile_nav);
+        ((BottomNavigationView) findViewById(R.id.bottom_navigation)).setOnItemSelectedListener(item -> {
+            FragmentContainerView view = findViewById(R.id.pagesFragment);
+            Fragment fragment = null;
+            switch (item.getItemId()) {
+                case R.id.messages_nav:
+                    fragment = new MessagesPageFragment();
+                    break;
+                case R.id.feed_nav:
+                    fragment = new FeedPageFragment();
+                    break;
+                default:
+                    fragment = new ProfilePageFragment();
+            }
+            FragmentManager fm = getSupportFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.replace(R.id.pagesFragment, fragment);
+            ft.commit();
+            return true;
+        });
     }
 }

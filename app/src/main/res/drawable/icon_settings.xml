@@ -20,8 +20,9 @@
 
         </shape>
     </item>
-    <item android:drawable="@drawable/vector_settings"
-        android:height="90dp"
+    <item
         android:width="90dp"
-        android:gravity="center"/>
+        android:height="90dp"
+        android:drawable="@drawable/vector_settings"
+        android:gravity="center" />
 </layer-list>

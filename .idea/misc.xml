@@ -14,6 +14,10 @@
         <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1365" />
         <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable/back_circle_icone.xml" value="0.2495" />
         <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1365" />
+        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable/icon_back.xml" value="0.1365" />
+        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable/icon_camera.xml" value="0.1365" />
+        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable/icon_done.xml" value="0.1365" />
+        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable/icon_settings.xml" value="0.1365" />
         <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable/preference_item.xml" value="0.262" />
         <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable/preference_item_blocked.xml" value="0.1365" />
         <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable/preference_item_checked.xml" value="0.1365" />
@@ -28,6 +32,7 @@
         <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable/vector_profile.xml" value="0.139" />
         <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/drawable/vector_settings.xml" value="0.2495" />
         <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/layout/activity_main.xml" value="0.26621847886098404" />
+        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/layout/fragment_blocked_interests_page.xml" value="0.2578125" />
         <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/layout/fragment_feed_page.xml" value="0.2578125" />
         <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/layout/fragment_interests_page.xml" value="0.26621847886098404" />
         <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/layout/fragment_messages_page.xml" value="0.2578125" />
