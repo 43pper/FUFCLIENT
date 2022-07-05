@@ -1,7 +1,6 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
-        <shape xmlns:android="http://schemas.android.com/apk/res/android"
-            android:shape="oval">
+        <shape android:shape="oval">
 
 
             <gradient
@@ -20,5 +19,5 @@
                 android:width="2.3dp"/>
         </shape>
     </item>
-    <item android:text="@string/hello_profile" />
+    <item android:drawable="@drawable/vector_arrow_back" />
 </layer-list>

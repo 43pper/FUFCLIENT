@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rectangle_basic"
+    android:transitionName="preferences_block"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/preferences_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Preferences"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/preferences_pref_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="5dp"
+        app:flexWrap="wrap"
+        app:justifyContent="space_between"
+        app:layout_constraintTop_toBottomOf="@id/preferences_title">
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <ImageButton
+        android:id="@+id/open_pref_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/vector_arrow_down"
+        android:contentDescription="open preferences"
+        android:onClick="togglePreferencesBlock"
+        android:transitionName="toggleButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

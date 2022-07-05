@@ -12,4 +12,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="greygrey">#C4C4C4</color>
     <color name="lightgrey">#FFF1E8FF</color>
+    <color name="darkViolet">#FFA292BC</color>
+    <color name="redHalfTransparent">#7FFF9595</color>
+    <color name="darkRedHalfTransparent">#7FCC0000</color>
+    <color name="darkGreen">#FF2BA80F</color>
+    <color name="green">#FFE7FCD4</color>
 </resources>
