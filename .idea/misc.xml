@@ -4,10 +4,22 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/FUFCLIENT/app/src/main/res/drawable/icon_camera.xml" value="0.1665" />
+        <entry key="..\:/FUFCLIENT/app/src/main/res/drawable/icon_chat_allchats.xml" value="0.1665" />
         <entry key="..\:/FUFCLIENT/app/src/main/res/drawable/icon_chat_profile.xml" value="0.1665" />
+        <entry key="..\:/FUFCLIENT/app/src/main/res/drawable/icon_chat_requests.xml" value="0.264" />
+        <entry key="..\:/FUFCLIENT/app/src/main/res/font/font.xml" value="0.2791666666666667" />
+        <entry key="..\:/FUFCLIENT/app/src/main/res/layout/activity_main.xml" value="0.11851851851851852" />
+        <entry key="..\:/FUFCLIENT/app/src/main/res/layout/fragment_blocked_interests_page.xml" value="0.11851851851851852" />
+        <entry key="..\:/FUFCLIENT/app/src/main/res/layout/fragment_feed_page.xml" value="0.11851851851851852" />
         <entry key="..\:/FUFCLIENT/app/src/main/res/layout/fragment_interests_page.xml" value="0.264" />
         <entry key="..\:/FUFCLIENT/app/src/main/res/layout/fragment_messages_page.xml" value="0.264" />
         <entry key="..\:/FUFCLIENT/app/src/main/res/layout/fragment_profile_page.xml" value="0.25" />
+        <entry key="..\:/FUFCLIENT/app/src/main/res/layout/fragment_profile_preferences.xml" value="0.11851851851851852" />
+        <entry key="..\:/FUFCLIENT/app/src/main/res/layout/fragment_profile_preferences_wide.xml" value="0.11851851851851852" />
+        <entry key="..\:/FUFCLIENT/app/src/main/res/layout/fragment_userschat_page.xml" value="0.24895833333333334" />
+        <entry key="..\:/FUFCLIENT/app/src/main/res/menu/nav_items.xml" value="0.11851851851851852" />
+        <entry key="..\:/FUFCLIENT/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+        <entry key="..\:/FUFCLIENT/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
         <entry key="..\:/PROJECTS/JAVA/FUFCLIENT/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.271" />
         <entry key="..\:/PROJECTS/JAVA/FUFCLIENT/app/src/main/res/drawable/ic_launcher_background.xml" value="0.271" />
         <entry key="..\:/PROJECTS/JAVA/FUFCLIENT/app/src/main/res/drawable/rectangle_basic.xml" value="0.271" />
