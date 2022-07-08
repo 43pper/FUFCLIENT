@@ -11,7 +11,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,11 +23,24 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.secag.fufclient.App;
+import com.secag.fufclient.Interest;
 import com.secag.fufclient.PreferenceItem;
 import com.secag.fufclient.R;
+import com.secag.fufclient.User;
+import com.squareup.picasso.Picasso;
+
+import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.json.Json;
 import javax.json.JsonArray;
+
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class ProfilePageFragment extends Fragment {
 
@@ -43,6 +59,25 @@ public class ProfilePageFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         setOnClickListenersPrefs();
         fillPrefsBlock();
+        TextView username = view.findViewById(R.id.profile_username);
+        ImageView photo = view.findViewById(R.id.photoProfile);
+        TextView description = view.findViewById(R.id.profile_description);
+        Picasso.with(getActivity()).load("https://fuf.azurewebsites.net/profiles/1/photo").into(photo);
+        App.getFufApi().getProfileById(1).enqueue(new Callback<User>() {
+            @Override
+            public void onResponse(Call<User> call, Response<User> response) {
+                if (response.body() == null) {
+                    return;
+                }
+                username.setText(response.body().getName() + " " + response.body().getLastName());
+                description.setText(response.body().getProfileDescription());
+            }
+
+            @Override
+            public void onFailure(Call<User> call, Throwable t) {
+
+            }
+        });
     }
 
     public void changePage(View view) {
@@ -93,36 +128,29 @@ public class ProfilePageFragment extends Fragment {
         if (block == null) {
             return;
         }
-        JsonArray array = Json.createArrayBuilder()
-                .add(Json.createObjectBuilder()
-                        .add("id", 0)
-                        .add("emoji", "💻")
-                        .add("title", "IT"))
-                .add(Json.createObjectBuilder()
-                        .add("id", 1)
-                        .add("emoji", "🍺")
-                        .add("title", "beer"))
-                .add(Json.createObjectBuilder()
-                        .add("id", 2)
-                        .add("emoji", "\uD83C\uDDFA\uD83C\uDDE6")
-                        .add("title", "Ukraine"))
-                .add(Json.createObjectBuilder()
-                        .add("id", 3)
-                        .add("emoji", "🎺")
-                        .add("title", "trumpets"))
-                .add(Json.createObjectBuilder()
-                        .add("id", 4)
-                        .add("emoji", "\uD83E\uDD95")
-                        .add("title", "paleontology")).build();
-        for (int i = 0; i < array.size(); i++) {
-            block.addView(new PreferenceItem(
-                    activity,
-                    null,
-                    PreferenceItem.ItemType.PREFERENCE,
-                    array.getJsonObject(i).getInt("id"),
-                    array.getJsonObject(i).getString("emoji"),
-                    array.getJsonObject(i).getString("title")));
-        }
+        final ArrayList<Interest>[] array = new ArrayList[]{new ArrayList<>()};
+        App.getFufApi().getInterestsByUserId(1).enqueue(new Callback<ArrayList<Interest>>() {
+            @Override
+            public void onResponse(Call<ArrayList<Interest>> call, Response<ArrayList<Interest>> response) {
+                if (response.body() != null) {
+                    array[0] = response.body();
+                    for (int i = 0; i < array[0].size(); i++) {
+                        block.addView(new PreferenceItem(
+                                activity,
+                                null,
+                                PreferenceItem.ItemType.PREFERENCE,
+                                array[0].get(i).getId(),
+                                array[0].get(i).getEmoji(),
+                                array[0].get(i).getTitle()));
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<Interest>> call, Throwable t) {
+                Toast.makeText(getActivity(), "An error occurred during networking", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     void fillLocationsBlock() {
@@ -156,22 +184,31 @@ public class ProfilePageFragment extends Fragment {
         if (block == null) {
             return;
         }
-        JsonArray array = Json.createArrayBuilder()
-                .add(Json.createObjectBuilder()
-                        .add("id", 0)
-                        .add("emoji", "\uD83C\uDDF7\uD83C\uDDFA")
-                        .add("title", "russia")).build();
-        for (int i = 0; i < array.size(); i++) {
-            PreferenceItem preferenceItem = new PreferenceItem(
-                    activity,
-                    null,
-                    PreferenceItem.ItemType.BLOCKED_PREFERENCE,
-                    array.getJsonObject(i).getInt("id"),
-                    array.getJsonObject(i).getString("emoji"),
-                    array.getJsonObject(i).getString("title"));
-            preferenceItem.toggleChecked();
-            block.addView(preferenceItem);
-        }
+        final ArrayList<Interest>[] array = new ArrayList[]{new ArrayList<>()};
+        App.getFufApi().getBlockedInterestsByUserId(1).enqueue(new Callback<ArrayList<Interest>>() {
+            @Override
+            public void onResponse(Call<ArrayList<Interest>> call, Response<ArrayList<Interest>> response) {
+                if (response.body() != null) {
+                    array[0] = response.body();
+                    for (int i = 0; i < array[0].size(); i++) {
+                        PreferenceItem preferenceItem = new PreferenceItem(
+                                activity,
+                                null,
+                                PreferenceItem.ItemType.BLOCKED_PREFERENCE,
+                                array[0].get(i).getId(),
+                                array[0].get(i).getEmoji(),
+                                array[0].get(i).getTitle());
+                        preferenceItem.toggleChecked();
+                        block.addView(preferenceItem);
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<Interest>> call, Throwable t) {
+                Toast.makeText(getActivity(), "An error occurred during networking", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     void setOnClickListenersPrefs() {

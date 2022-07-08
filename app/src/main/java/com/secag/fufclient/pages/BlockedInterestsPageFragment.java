@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,6 +15,8 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.secag.fufclient.App;
+import com.secag.fufclient.Interest;
 import com.secag.fufclient.PreferenceItem;
 import com.secag.fufclient.R;
 
@@ -21,6 +24,10 @@ import java.util.ArrayList;
 
 import javax.json.Json;
 import javax.json.JsonArray;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class BlockedInterestsPageFragment extends Fragment {
 
@@ -47,6 +54,11 @@ public class BlockedInterestsPageFragment extends Fragment {
         if (activity == null) {
             return;
         }
+        view.findViewById(R.id.done_button).setOnClickListener(view1 -> {
+            FragmentManager manager = activity.getSupportFragmentManager();
+            BlockedInterestsDialog interestsDialog = new BlockedInterestsDialog(selectedInterestsId);
+            interestsDialog.show(manager, "myDialog");
+        });
         ImageButton backButton = view.findViewById(R.id.back_button);
         backButton.setOnClickListener(view1 -> {
             Fragment fragment = new ProfilePageFragment();
@@ -59,61 +71,56 @@ public class BlockedInterestsPageFragment extends Fragment {
         if (block == null) {
             return;
         }
-        JsonArray array = Json.createArrayBuilder()
-                .add(Json.createObjectBuilder()
-                        .add("id", 0)
-                        .add("emoji", "💻")
-                        .add("title", "IT"))
-                .add(Json.createObjectBuilder()
-                        .add("id", 1)
-                        .add("emoji", "🍺")
-                        .add("title", "beer"))
-                .add(Json.createObjectBuilder()
-                        .add("id", 2)
-                        .add("emoji", "\uD83C\uDDFA\uD83C\uDDE6")
-                        .add("title", "Ukraine"))
-                .add(Json.createObjectBuilder()
-                        .add("id", 3)
-                        .add("emoji", "🎺")
-                        .add("title", "trumpets"))
-                .add(Json.createObjectBuilder()
-                        .add("id", 4)
-                        .add("emoji", "\uD83E\uDD95")
-                        .add("title", "paleontology")).build();
-        JsonArray selectedItems = Json.createArrayBuilder()
-                .add(Json.createObjectBuilder()
-                        .add("id", 0)
-                        .add("emoji", "💻")
-                        .add("title", "IT"))
-                .add(Json.createObjectBuilder()
-                        .add("id", 2)
-                        .add("emoji", "\uD83C\uDDFA\uD83C\uDDE6")
-                        .add("title", "Ukraine"))
-                .add(Json.createObjectBuilder()
-                        .add("id", 3)
-                        .add("emoji", "🎺")
-                        .add("title", "trumpets")).build();
-        for (int i = 0; i < array.size(); i++) {
-            PreferenceItem preferenceItem = new PreferenceItem(
-                    activity,
-                    null,
-                    PreferenceItem.ItemType.BLOCKED_PREFERENCE,
-                    array.getJsonObject(i).getInt("id"),
-                    array.getJsonObject(i).getString("emoji"),
-                    array.getJsonObject(i).getString("title"));
-            if (selectedItems.stream().anyMatch(x -> x.asJsonObject().getInt("id") == preferenceItem.getDBId())) {
-                selectedInterestsId.add(preferenceItem.getDBId());
-                preferenceItem.toggleChecked();
-            }
-            preferenceItem.setOnClickListener(view1 -> {
-                PreferenceItem item = (PreferenceItem) view1;
-                if (item.toggleChecked()) {
-                    selectedInterestsId.add(item.getDBId());
-                } else {
-                    selectedInterestsId.remove((Integer) item.getDBId());
+        final ArrayList<Interest>[] allInterests = new ArrayList[]{new ArrayList<>()};
+        final ArrayList<Interest>[] userInterests = new ArrayList[]{new ArrayList<>()};
+        App.getFufApi().getAllInterests().enqueue(new Callback<ArrayList<Interest>>() {
+
+            @Override
+            public void onResponse(Call<ArrayList<Interest>> call, Response<ArrayList<Interest>> response) {
+                if (response.body() != null) {
+                    allInterests[0] = response.body();
+                    App.getFufApi().getBlockedInterestsByUserId(1).enqueue(new Callback<ArrayList<Interest>>() {
+
+                        @Override
+                        public void onResponse(Call<ArrayList<Interest>> call, Response<ArrayList<Interest>> response) {
+                            if (response.body() != null) {
+                                userInterests[0] = response.body();
+                                for (int i = 0; i < allInterests[0].size(); i++) {
+                                    PreferenceItem preferenceItem = new PreferenceItem(
+                                            activity,
+                                            null,
+                                            PreferenceItem.ItemType.BLOCKED_PREFERENCE,
+                                            allInterests[0].get(i).getId(),
+                                            allInterests[0].get(i).getEmoji(),
+                                            allInterests[0].get(i).getTitle());
+                                    int finalI = i;
+                                    if (userInterests[0].stream().anyMatch(item -> item.getId() == allInterests[0].get(finalI).getId())) {
+                                        selectedInterestsId.add(preferenceItem.getDBId());
+                                        preferenceItem.toggleChecked();
+                                    }
+                                    preferenceItem.setOnClickListener(view1 -> {
+                                        PreferenceItem item = (PreferenceItem) view1;
+                                        if (item.toggleChecked()) {
+                                            selectedInterestsId.add(item.getDBId());
+                                        } else {
+                                            selectedInterestsId.remove((Integer) item.getDBId());
+                                        }
+                                    });
+                                    block.addView(preferenceItem);
+                                }
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<ArrayList<Interest>> call, Throwable t) {
+                        }
+                    });
                 }
-            });
-            block.addView(preferenceItem);
-        }
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<Interest>> call, Throwable t) {
+            }
+        });
     }
 }

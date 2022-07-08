@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
             Fragment fragment = null;
             switch (item.getItemId()) {
                 case R.id.messages_nav:
-                    fragment = new MessagesPageFragment();
+                    fragment = new MessagesPageFragment("chats");
                     break;
                 case R.id.feed_nav:
                     fragment = new FeedPageFragment();

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pages.FeedCardFragment"
+    android:paddingHorizontal="17dp"
+    android:paddingTop="35dp"
+    android:paddingBottom="20dp"
+    android:background="@color/purple">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rectangle_basic_white"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/feed_profile_pic"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/feed_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingVertical="10dp"
+            android:text="\@Marusya"
+            android:textSize="20sp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="10dp">
+
+            <ImageView
+                android:id="@+id/prefs_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_feed_prefs"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="10dp"
+                app:layout_constraintLeft_toRightOf="@id/prefs_icon"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/first_preference"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="3dp"
+                    android:background="@drawable/feed_preference_item"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="10dp">
+
+                    <TextView
+                        android:id="@+id/feed_pref_emoji1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="5dp"
+                        android:text="🥱"
+                        android:textSize="19sp" />
+
+                    <TextView
+                        android:id="@+id/feed_pref_text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Meeeeeh"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/second_preference"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="3dp"
+                    android:background="@drawable/feed_preference_item"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="10dp">
+
+                    <TextView
+                        android:id="@+id/feed_pref_emoji2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="5dp"
+                        android:text="🥱"
+                        android:textSize="19sp" />
+
+                    <TextView
+                        android:id="@+id/feed_pref_text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Meeeeeh"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/third_preference"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="3dp"
+                    android:background="@drawable/feed_preference_item"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="10dp">
+
+                    <TextView
+                        android:id="@+id/feed_pref_emoji3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="5dp"
+                        android:text="🥱"
+                        android:textSize="19sp" />
+
+                    <TextView
+                        android:id="@+id/feed_pref_text3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Meeeeeh"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fourth_preference"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="3dp"
+                    android:background="@drawable/feed_preference_item"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="10dp">
+
+                    <TextView
+                        android:id="@+id/feed_pref_emoji4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="5dp"
+                        android:text="🥱"
+                        android:textSize="19sp" />
+
+                    <TextView
+                        android:id="@+id/feed_pref_text4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Meeeeeh"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="10dp">
+
+            <ImageView
+                android:id="@+id/locations_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="fitCenter"
+                android:src="@drawable/vector_location" />
+
+            <LinearLayout
+                android:id="@+id/first_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="3dp"
+                    android:background="@drawable/feed_special_preference_item"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="10dp">
+
+                    <TextView
+                        android:id="@+id/feed_loc_text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Meeeeeh"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/second_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="3dp"
+                    android:background="@drawable/feed_preference_item"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="10dp">
+
+                    <TextView
+                        android:id="@+id/feed_loc_text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Meeeeeh"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/second_separator"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="8dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintTop_toBottomOf="@id/preferences_locations_block" />
+
+        <TextView
+            android:id="@+id/feed_desc_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:paddingHorizontal="5dp"
+            android:paddingTop="5dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate augue vitae nunc luctus, ac consequat ante pharetra. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec imperdiet arcu tortor, ac interdum metus pellentesque in. Phasellus feugiat aliquet mauris, consectetur dictum quam porta eget. Proin vitae cursus turpis. Nunc eget felis et augue sodales ultrices ut ac odio. Proin viverra ante et commodo maximus."
+            android:textAlignment="center"
+            android:textSize="19sp" />
+    </LinearLayout>
+</FrameLayout>

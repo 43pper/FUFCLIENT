@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/purple"
-    android:paddingTop="40dp"
     android:orientation="vertical"
+    android:paddingTop="40dp"
     tools:context=".pages.MessagesPageFragment">
     <!--    android:background="@color/teal_200"-->
 
@@ -17,6 +17,7 @@
         android:orientation="horizontal">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/chats_button"
             android:layout_width="202dp"
             android:layout_height="match_parent"
             android:background="@drawable/icon_chat_allchats_false">
@@ -26,8 +27,8 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_medium"
                 android:text="chats"
-                android:textSize="20sp"
                 android:textColor="@color/white"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -41,13 +42,14 @@
             android:layout_width="212dp"
             android:layout_height="35dp"
             android:background="@drawable/icon_chat_requests_true">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_medium"
                 android:text="requests"
-                android:textSize="20sp"
                 android:textColor="@color/white"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -62,8 +64,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/lightViolet"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
 
         <LinearLayout
@@ -116,8 +117,8 @@
                         android:fontFamily="@font/roboto_regular"
                         android:paddingLeft="10dp"
                         android:text="last active 3 days ago"
-                        android:textSize="11sp"
                         android:textColor="@color/redbrown"
+                        android:textSize="11sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -131,8 +132,8 @@
                     android:fontFamily="@font/roboto_regular"
                     android:paddingLeft="10dp"
                     android:paddingTop="15dp"
-                    android:textSize="16sp"
                     android:text="Lorem ipsum"
+                    android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/textView">
 
@@ -146,10 +147,10 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/grey"
             android:orientation="horizontal"
             android:paddingVertical="20dp"
-            android:paddingLeft="20dp"
-            android:background="@color/grey">
+            android:paddingLeft="20dp">
 
             <View
                 android:id="@+id/view1"
@@ -194,8 +195,8 @@
                         android:fontFamily="@font/roboto_regular"
                         android:paddingLeft="10dp"
                         android:text="last active 3 days ago"
-                        android:textSize="11sp"
                         android:textColor="@color/redbrown"
+                        android:textSize="11sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -209,8 +210,8 @@
                     android:fontFamily="@font/roboto_regular"
                     android:paddingLeft="10dp"
                     android:paddingTop="15dp"
-                    android:textSize="16sp"
                     android:text="Lorem ipsum"
+                    android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/textView">
 

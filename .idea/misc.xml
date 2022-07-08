@@ -3,16 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/FUFCLIENT/app/src/main/res/drawable/ic_launcher_background.xml" value="0.175" />
         <entry key="..\:/FUFCLIENT/app/src/main/res/drawable/icon_camera.xml" value="0.1665" />
         <entry key="..\:/FUFCLIENT/app/src/main/res/drawable/icon_chat_allchats.xml" value="0.1665" />
-        <entry key="..\:/FUFCLIENT/app/src/main/res/drawable/icon_chat_allchats_false.xml" value="0.175" />
         <entry key="..\:/FUFCLIENT/app/src/main/res/drawable/icon_chat_profile.xml" value="0.1665" />
         <entry key="..\:/FUFCLIENT/app/src/main/res/drawable/icon_chat_requests.xml" value="0.264" />
-        <entry key="..\:/FUFCLIENT/app/src/main/res/drawable/icon_chat_requests_true.xml" value="0.175" />
-        <entry key="..\:/FUFCLIENT/app/src/main/res/drawable/preference_item_checked.xml" value="0.175" />
-        <entry key="..\:/FUFCLIENT/app/src/main/res/drawable/vector_arrow_back.xml" value="0.175" />
-        <entry key="..\:/FUFCLIENT/app/src/main/res/drawable/vector_arrow_down.xml" value="0.175" />
         <entry key="..\:/FUFCLIENT/app/src/main/res/font/font.xml" value="0.2791666666666667" />
         <entry key="..\:/FUFCLIENT/app/src/main/res/layout/activity_main.xml" value="0.11851851851851852" />
         <entry key="..\:/FUFCLIENT/app/src/main/res/layout/fragment_blocked_interests_page.xml" value="0.11851851851851852" />
@@ -22,7 +16,6 @@
         <entry key="..\:/FUFCLIENT/app/src/main/res/layout/fragment_profile_page.xml" value="0.25" />
         <entry key="..\:/FUFCLIENT/app/src/main/res/layout/fragment_profile_preferences.xml" value="0.11851851851851852" />
         <entry key="..\:/FUFCLIENT/app/src/main/res/layout/fragment_profile_preferences_wide.xml" value="0.11851851851851852" />
-        <entry key="..\:/FUFCLIENT/app/src/main/res/layout/fragment_requests_page.xml" value="0.24895833333333334" />
         <entry key="..\:/FUFCLIENT/app/src/main/res/layout/fragment_userschat_page.xml" value="0.24895833333333334" />
         <entry key="..\:/FUFCLIENT/app/src/main/res/menu/nav_items.xml" value="0.11851851851851852" />
         <entry key="..\:/FUFCLIENT/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
@@ -35,6 +28,17 @@
         <entry key="..\:/PROJECTS/JAVA/FUFCLIENT/app/src/main/res/layout/fragment_hotbar.xml" value="0.358695652173913" />
         <entry key="..\:/PROJECTS/JAVA/FUFCLIENT/app/src/main/res/layout/fragment_messages_page.xml" value="0.1" />
         <entry key="..\:/PROJECTS/JAVA/FUFCLIENT/app/src/main/res/layout/fragment_profile_page.xml" value="0.22" />
+        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/layout/fragment_blocked_interests_page.xml" value="0.2578125" />
+        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/layout/fragment_dialog.xml" value="0.2578125" />
+        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/layout/fragment_feed_card.xml" value="0.4033613316075515" />
+        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/layout/fragment_feed_page.xml" value="0.12537993920972645" />
+        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/layout/fragment_interests_page.xml" value="0.2578125" />
+        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/layout/fragment_messages_page.xml" value="0.16134453264302062" />
+        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/layout/fragment_profile_page.xml" value="0.1" />
+        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/layout/fragment_profile_preferences.xml" value="0.12537993920972645" />
+        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/layout/fragment_profile_preferences_wide.xml" value="0.12537993920972645" />
+        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/layout/fragment_requests_page.xml" value="0.20168066580377575" />
+        <entry key="..\:/Users/chaso/StudioProjects/FUFCLIENT/app/src/main/res/layout/fragment_userschat_page.xml" value="0.12537993920972645" />
       </map>
     </option>
   </component>

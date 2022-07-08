@@ -10,117 +10,142 @@
     android:transitionName="preferences_block"
     tools:context=".pages.ProfilePageFragment">
 
-    <TextView
-        android:id="@+id/preferences_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text="Preferences"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/preferences_edit"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_gravity="center"
-        android:background="#00000000"
-        android:contentDescription="change preferences"
-        android:elevation="30dp"
-        android:padding="9dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/vector_edit"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.flexbox.FlexboxLayout
-        android:id="@+id/preferences_pref_block"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="10dp"
-        android:paddingVertical="5dp"
-        app:flexWrap="wrap"
-        app:justifyContent="space_between"
-        app:layout_constraintTop_toBottomOf="@id/preferences_title">
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingBottom="28dp">
 
-    </com.google.android.flexbox.FlexboxLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <View
-        android:id="@+id/first_separator"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintTop_toBottomOf="@id/preferences_pref_block" />
+            <TextView
+                android:id="@+id/preferences_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Preferences"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.flexbox.FlexboxLayout
-        android:id="@+id/preferences_locations_block"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="10dp"
-        android:paddingVertical="5dp"
-        app:flexWrap="wrap"
-        app:justifyContent="space_between"
-        app:layout_constraintTop_toBottomOf="@id/first_separator">
+            <ImageButton
+                android:id="@+id/preferences_edit"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:background="#00000000"
+                android:contentDescription="change preferences"
+                android:elevation="30dp"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/vector_edit"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </com.google.android.flexbox.FlexboxLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <ImageButton
-        android:id="@+id/locations_edit"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_gravity="center"
-        android:background="#00000000"
-        android:contentDescription="change locations"
-        android:elevation="30dp"
-        android:padding="9dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/vector_edit"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/preferences_locations_block" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <View
-        android:id="@+id/second_separator"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintTop_toBottomOf="@id/preferences_locations_block" />
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/preferences_pref_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    app:flexWrap="wrap"
+                    app:justifyContent="space_between"
+                    app:layout_constraintTop_toTopOf="parent">
 
-    <com.google.android.flexbox.FlexboxLayout
-        android:id="@+id/preferences_feed_prefs_block"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="10dp"
-        android:paddingVertical="5dp"
-        app:flexWrap="wrap"
-        app:justifyContent="space_between"
-        app:layout_constraintTop_toBottomOf="@id/second_separator">
+                </com.google.android.flexbox.FlexboxLayout>
 
-    </com.google.android.flexbox.FlexboxLayout>
+                <View
+                    android:id="@+id/first_separator"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintTop_toBottomOf="@id/preferences_pref_block" />
 
-    <ImageButton
-        android:id="@+id/feed_preferences_edit"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_gravity="center"
-        android:background="#00000000"
-        android:contentDescription="change feed preferences"
-        android:elevation="30dp"
-        android:padding="9dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/vector_edit"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/preferences_feed_prefs_block" />
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/preferences_locations_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    app:flexWrap="wrap"
+                    app:justifyContent="space_between"
+                    app:layout_constraintTop_toBottomOf="@id/first_separator">
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+                <ImageButton
+                    android:id="@+id/locations_edit"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:background="#00000000"
+                    android:contentDescription="change locations"
+                    android:elevation="30dp"
+                    android:padding="9dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/vector_edit"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/preferences_locations_block" />
+
+                <View
+                    android:id="@+id/second_separator"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintTop_toBottomOf="@id/preferences_locations_block" />
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/preferences_feed_prefs_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    app:flexWrap="wrap"
+                    app:justifyContent="space_between"
+                    app:layout_constraintTop_toBottomOf="@id/second_separator">
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+                <ImageButton
+                    android:id="@+id/feed_preferences_edit"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:background="#00000000"
+                    android:contentDescription="change feed preferences"
+                    android:elevation="30dp"
+                    android:padding="9dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/vector_edit"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/preferences_feed_prefs_block" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </LinearLayout>
 
     <ImageButton
         android:id="@+id/close_pref_button"
-        android:layout_width="48dp"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:background="@drawable/vector_arrow_up"
+        android:background="#00000000"
         android:contentDescription="close preferences"
+        android:scaleType="fitCenter"
+        android:src="@drawable/vector_arrow_up"
         android:transitionName="toggleButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
